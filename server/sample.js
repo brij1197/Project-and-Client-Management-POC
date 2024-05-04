@@ -1,34 +1,34 @@
 const projects = [
     {
-        id: 1,
+        id: "1",
         clientID: "101",
         name: 'Website Redesign',
         description: 'Complete redesign of the client\'s main website to improve user experience and SEO.',
         status: 'In Progress'
     },
     {
-        id: 2,
+        id: "2",
         clientID: "102",
         name: 'Mobile Application Development',
         description: 'Development of a cross-platform mobile app for online shopping with integrated payment solutions.',
         status: 'Completed'
     },
     {
-        id: 3,
+        id: "3",
         clientID: "103",
         name: 'Data Migration',
         description: 'Migrating legacy data to a new cloud-based storage system, ensuring data integrity and security.',
         status: 'Pending'
     },
     {
-        id: 4,
+        id: "4",
         clientID: "104",
         name: 'Marketing Campaign',
         description: 'Planning and executing a digital marketing campaign for the launch of a new product line.',
         status: 'In Progress'
     },
     {
-        id: 5,
+        id: "5",
         clientID: "105",
         name: 'Security Audit',
         description: 'Conducting a comprehensive security audit to identify potential vulnerabilities in the IT infrastructure.',
