@@ -10,16 +10,16 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.all(
-  "/graphql",
-  createHandler({
-    schema,
-    graphiql: process.env.NODE_ENV === "development",
-  })
+    "/graphql",
+    createHandler({
+        schema,
+        graphiql: process.env.NODE_ENV === "development",
+    })
 );
 
 app.get("/", (_req, res) => {
-  res.type("html");
-  res.end(ruruHTML({ endpoint: "/graphql" }));
+    res.type("html");
+    res.end(ruruHTML({ endpoint: "/graphql" }));
 });
 
 app.listen(PORT, console.log(`Server running on ${PORT}`));
