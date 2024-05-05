@@ -1,13 +1,15 @@
 require("dotenv").config();
-const connectDB=require('./config/db');
+const connectDB = require("./config/db");
 const colors = require("colors");
+const cors = require("cors");
 const express = require("express");
 const schema = require("./schema/schema");
 const { createHandler } = require("graphql-http/lib/use/express");
 const { ruruHTML } = require("ruru/server");
 
-
 const app = express();
+
+app.use(cors());
 
 connectDB();
 
