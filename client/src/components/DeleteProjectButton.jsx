@@ -13,7 +13,7 @@ export const DeleteProjectButton = ({ projectId }) => {
   });
 
   return (
-    <div className="d-flex mt-5 ms-auto">
+    <div className="d-flex mt-3">
       <button className="btn btn-danger m-2" onClick={deleteProject}>
         <FaTrash className="icon" />
         Delete Project
