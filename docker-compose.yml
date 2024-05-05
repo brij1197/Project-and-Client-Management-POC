@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  frontend:
+    build: client
+    container_name: client
+    restart: always
+    volumes:
+      - './client:/app'
+      - '/app/node_modules'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend
+
+  backend:
+    build: server
+    container_name: server
+    restart: always
+    volumes:
+      - './server:/app'
+      - '/app/node_modules'
+    ports:
+      - '5000:5000'
+    environment:
+      - NODE_ENV=development
+      - MONGO_URI=mongodb://mongo:27017/myappdb
+    depends_on:
+      - mongo
+
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    restart: always
+    volumes:
+      - 'mongodata:/data/db'
+    ports:
+      - '27017:27017'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+
+volumes:
+  mongodata:
