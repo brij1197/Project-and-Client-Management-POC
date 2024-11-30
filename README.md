@@ -97,8 +97,6 @@ This is a proof of concept for a Project and Client Management system built with
     http://localhost:3000
     ```
 
-## Usage
-
 ### Running the Application
 
 1. **Start the backend server:**
